@@ -63,7 +63,7 @@ Load python dependencies before execute any python sample
 $ pip install -r requirements.txt
 ```
 
-Recover **ca.crt** root ca certificate from elasticsearch secrets called **avib-elastic-certs** from dashboard or executing
+Recover root ca certificate value from elasticsearch secrets called **avib-elastic-certs** and attribute called  **ca.crt** from dashboard or executing
 this command. Then paste the value inside a file called ca.crt used by our python sample to validate our certifcates
 
 ```
