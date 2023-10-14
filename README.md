@@ -12,11 +12,6 @@ Edit the hosts file under **/etc/hosts** to set some IP aliases
 - The first entrance represent a **localhost IP alias** for the domain included in the elastic certificates default deployment, to validate certifcates in SSL connections
 - The second entrance represent a **minikube cluster IP alias** to used in our requests from kubernetes Ingress
 
-Load python dependencies before execute any python sample
-
-```
-$ pip install -r requirements.txt
-```
 
 # Some elastic configurations
 - Create first the proxy port-forward connecting to the port 9200 exposed by the elastic service
@@ -61,6 +56,12 @@ $ kubectl apply -f ingress-elastic.yaml
 ```
 
 # Some python configurations
+
+Load python dependencies before execute any python sample
+
+```
+$ pip install -r requirements.txt
+```
 
 Recover **ca.crt** root ca certificate from elasticsearch secrets called **avib-elastic-certs** from dashboard or executing
 this command. Then paste the value inside a file called ca.crt used by our python sample to validate our certifcates
