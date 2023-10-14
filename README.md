@@ -119,3 +119,11 @@ execute the python sample
 python3 main.py
 {'patients_1000': {'aliases': {}}, 'patients_10000': {'aliases': {}}, 'patients_1000000': {'aliases': {}}, 'patients_100000': {'aliases': {}}}
 ```
+
+# Some kubernetes command
+
+To check request from ingress execute this command:
+
+```
+kubectl logs -n ingress-nginx ingress-nginx-controller-5d88495688-pg6n8 -f
+```
