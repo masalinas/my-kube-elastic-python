@@ -64,7 +64,7 @@ $ pip install -r requirements.txt
 ```
 
 Recover root ca certificate value from elasticsearch secrets called **avib-elastic-certs** and attribute called  **ca.crt** from dashboard or executing
-this command. Then paste the value inside a file called ca.crt used by our python sample to validate our certifcates
+this command. Then paste the value inside a file called ca.crt used by our python or curl samples or to validate our certifcates
 
 ```
 $ kubectl get secrets avib-elastic-certs -o jsonpath='{.data}'
