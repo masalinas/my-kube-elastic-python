@@ -1,5 +1,5 @@
 # Description
-Connect to elasticsearch deployed in minikube from different sources validating SSL connections to recover all indices.
+PoC to connect to elasticsearch deployed in minikube from different sources validating SSL connections to recover all indices.
 
 # Some local configurations
 Edit the hosts file under **/etc/hosts** to set some IP aliases
