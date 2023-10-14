@@ -9,17 +9,17 @@ Edit the hosts file under **/etc/hosts** to set some IP aliases
 172.23.0.2 minikube.io
 ```
 
-- The first entrance represent a **localhost IP alias** for the domain included in the elastic certs to validate certifcates in SSL connections
-- The second entrance represent a **minikube cluster IP** alias to used in our requests from kubernetes Ingress
+- The first entrance represent a **localhost IP alias** for the domain included in the elastic certificates default deployment, to validate certifcates in SSL connections
+- The second entrance represent a **minikube cluster IP alias** to used in our requests from kubernetes Ingress
 
 # Some elastic configurations
-- Create the proxy port-forward first connection to the port 9200 expose by the elastic service:
+- Create first the proxy port-forward connecting to the port 9200 exposed by the elastic service
 
 ```
 $ kubectl port-forward svc/avib-elastic 9200
 ```
 
-- Create a elastic ingress entrance inside our minikube ingress controller to configure external connections to elastic. Write a **ingress-elastic.yaml** file:
+- Create a elastic ingress entrance inside our minikube ingress controller to configure external connections to Elasticsearch. Write a **ingress-elastic.yaml** file like this:
 
 ```
 apiVersion: networking.k8s.io/v1
