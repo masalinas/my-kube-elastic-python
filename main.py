@@ -17,6 +17,14 @@ es = Elasticsearch(
     verify_certs=True
 )
 
+# get elastic health
+print("Elasticsearch cluster health:")
+resp = es.cluster.health()
+print(resp)
+
+print("")
+
 # get all indices from elastic
+print("Get Elasticsearch indices:")
 resp = es.indices.get_alias(index="*")
 print(resp)
